@@ -17,7 +17,7 @@ int main(int argc, char** argv){
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL
 
-    GLFWwindow* window = nullptr;
+    GLFWwindow* window;
     window = glfwCreateWindow(1024, 768, "Tutorial 01", nullptr, nullptr);
     if(window == nullptr){
         cerr << "Failed to open GLFW window.\n";
