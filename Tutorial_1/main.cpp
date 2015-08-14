@@ -18,6 +18,31 @@ int main(int argc, char** argv){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL
 
     GLFWwindow* window = nullptr;
+    window = glfwCreateWindow(1024, 768, "Tutorial 01", nullptr, nullptr);
+    if(window == nullptr){
+        cerr << "Failed to open GLFW window.\n";
+        glfwTerminate();
+        return -1;
+    }
+
+    glfwMakeContextCurrent(window);
+    glewExperimental= true;                         // Needed in core profile
+    if(glewInit() != GLEW_OK){
+        cerr << "Failed to initalize GLEW.\n";
+        return -1;
+    }
+
+    glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+    do{
+        // Draw nothing, see you in tutorial 2 !
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        // Swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+    while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS && glfwWindowShouldClose(window) == 0 );
+
     return 0;
 }
 
