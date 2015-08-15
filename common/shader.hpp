@@ -6,9 +6,6 @@
 namespace Shaders{
     GLuint
     loadBMP_custom(const char * imagepath){
-
-        printf("Reading image %s\n", imagepath);
-
         // Data read from the header of the BMP file
         unsigned char header[54];
         unsigned int dataPos;

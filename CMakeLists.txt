@@ -13,5 +13,8 @@ add_subdirectory(Tutorial_2)
 add_subdirectory(Tutorial_3)
 add_subdirectory(Tutorial_4)
 add_subdirectory(Tutorial_5)
+add_subdirectory(Tutorial_6)
 
 set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_C_COMPILER /usr/bin/clang)
+set(CMAKE_CXX_COMPILER /usr/bin/clang++)
