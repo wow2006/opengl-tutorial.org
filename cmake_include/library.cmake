@@ -12,7 +12,8 @@ find_package(GLFW REQUIRED)
 # find GLM library
 find_package(GLM REQUIRED)
 
-include_directories(${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS})
+set(common "${PROJECT_SOURCE_DIR}/common/")
+include_directories(${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS} ${common})
 # Libraries needed on all platforms for this project
 set( LIBRARIES
     ${GLEW_LIBRARIES}
