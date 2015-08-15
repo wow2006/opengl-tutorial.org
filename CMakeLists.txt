@@ -12,5 +12,6 @@ add_subdirectory(Tutorial_1)
 add_subdirectory(Tutorial_2)
 add_subdirectory(Tutorial_3)
 add_subdirectory(Tutorial_4)
+add_subdirectory(Tutorial_5)
 
 set(CMAKE_BUILD_TYPE Debug)
