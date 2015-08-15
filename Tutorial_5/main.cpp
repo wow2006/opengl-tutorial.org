@@ -167,7 +167,7 @@ main(int argc, char** argv){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL
 
     GLFWwindow* window = nullptr;
-    window = glfwCreateWindow(1024, 768, "Tutorial 03", nullptr, nullptr);
+    window = glfwCreateWindow(1024, 768, "Tutorial 05", nullptr, nullptr);
     if(window == nullptr){
         cerr << "Failed to open GLFW window.\n";
         glfwTerminate();
